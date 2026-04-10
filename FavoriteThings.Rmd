@@ -1,6 +1,6 @@
 ---
 title: "A few of my favorite things"
-author: "Alex Hurtado Desaulniers"
+author: "Cristian Santiago"
 output: html_notebook
 ---
 
@@ -8,10 +8,7 @@ Include 4 items or hobbies that are your favorite and then include an emoji at t
 Example:
 
 My Unordered List:
-
- - Books and Reading
- - Yarn and Crocheting 
- - Bikes and MTB
- - Modding controllers and Playing Videogames
-
-🍴
+- Gym
+- Gaming
+- Music
+- Traveling

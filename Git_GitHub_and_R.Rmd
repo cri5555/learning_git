@@ -1,0 +1,139 @@
+---
+title: "Classwork Activity"
+author: "cristian santiago"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Instructions (Step by Step)
+
+
+
+## Step 1: Create fake data
+```{r}
+set.seed(2073)
+
+students <- data.frame(
+  Name = paste("Student", 1:20),
+  StudyHours = round(runif(20, 1, 10), 1),
+  Satisfaction = round(rnorm(20, mean = 7, sd = 1.5), 1),
+  Major = sample(c("Data Science", "Business Analytics", "Math", "Computer Science"), 20, replace = TRUE)
+)
+
+head(students)
+```
+
+# Remove the Name column
+
+```{r}
+
+Students_Clean <- students
+Students_Clean$Name <- NULL
+
+head(Students_Clean)
+```
+
+
+### Question: Why might someone drop a column like name or ID from a dataset?
+
+
+
+
+
+### Answer: Names or IDs usually don’t help with analysis because they aren’t numeric or useful for patterns. Removing them helps keep the data cleaner and easier to work with.
+
+```{r}
+library(ggplot2)
+```
+
+## Step 3: visualize
+
+```{r}
+ggplot(Students_Clean, aes(x = Major, y = Satisfaction, fill = Major)) +
+  geom_boxplot() +
+  labs(
+    title = "Student Satisfaction by Major",
+    x = "Major",
+    y = "Satisfaction (1–10)"
+  ) +
+  theme_minimal()
+
+```
+## Step 4: Explain: Write 2-3 scenteces each 
+### Questions:
+1. The chart shows that satisfaction is pretty similar across majors, but some have slightly higher or lower medians.
+
+2. This could be because different majors have different workloads or stress levels.
+
+3. The chart is somewhat accurate, but the dataset is small and randomly generated.
+
+4. Because the data is fake and only has 20 students, it may not reflect real-world patterns.
+
+## Step 5: Questions on Git, GitHub and R Markdown 
+### Questions: 
+
+1. What does git add do? stages files so they are ready to be saved in a commit.
+
+2. What is the difference between git commit and git push?git commit saves changes locally, while git push sends those changes to GitHub.
+
+3. Why is it useful to use GitHub for your code or data projects? GitHub is useful because it stores your work online and lets you track changes and share projects.
+
+4. How could version control help when collaborating? Version control helps teams avoid overwriting each other’s work and keeps history of changes.
+
+5. What is the difference between a code chunk and regular text in R Markdown?A code chunk runs code, while regular text explains what’s happening.
+
+6. How could R Markdown help you explain your analysis to someone else? R Markdown lets you combine code, output, and explanations in one document.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
